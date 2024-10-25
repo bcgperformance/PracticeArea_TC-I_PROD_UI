@@ -1,8 +1,8 @@
 name: PracticeArea_TC-I_PROD_UI_Runner
 
 on:
-  schedule:
-    - cron: '1 13 * * 6'
+#  schedule:
+   # - cron: '1 13 * * 6'
    # - cron: '1 */4 * * 0-6'
   workflow_dispatch:
     inputs:
