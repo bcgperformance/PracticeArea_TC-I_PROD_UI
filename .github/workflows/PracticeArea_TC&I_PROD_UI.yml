@@ -1,8 +1,8 @@
 name: Profiles_stg_Runner
 
 on:
- # schedule:
-   # - cron: '1 12 * * 6'
+  schedule:
+    - cron: '1 13 * * 6'
    # - cron: '1 */4 * * 0-6'
   workflow_dispatch:
     inputs:
@@ -48,10 +48,10 @@ jobs:
         run: neoload workspaces use "K&D - I and I"
         
       - name: "Do Test Settings"
-        run: neoload test-settings --zone HtRnd --lgs 1 --scenario 'scenario1' createorpatch "Profiles_stg_UI_CICD"
+        run: neoload test-settings --zone HtRnd --lgs 1 --scenario 'scenario1' createorpatch "PracticeArea_TC&I_PROD_UI"
 
       - name: "Upload Project"
-        run: neoload project --path Profiles_UI_CICD.zip upload Profiles_stg_UI_CICD
+        run: neoload project --path Profiles_UI_CICD.zip upload PracticeArea_TC&I_PROD_UI
 
       - name: "Neoload run test"
         run: >
