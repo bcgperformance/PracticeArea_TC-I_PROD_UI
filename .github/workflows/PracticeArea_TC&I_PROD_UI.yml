@@ -1,4 +1,4 @@
-name: Profiles_stg_Runner
+name: PracticeArea_TC-I_PROD_UI_Runner
 
 on:
   schedule:
@@ -51,7 +51,7 @@ jobs:
         run: neoload test-settings --zone HtRnd --lgs 1 --scenario 'scenario1' createorpatch "PracticeArea_TC&I_PROD_UI"
 
       - name: "Upload Project"
-        run: neoload project --path Profiles_UI_CICD.zip upload PracticeArea_TC&I_PROD_UI
+        run: neoload project --path PracticeArea_TC&I_PROD_UI.zip upload PracticeArea_TC&I_PROD_UI
 
       - name: "Neoload run test"
         run: >
